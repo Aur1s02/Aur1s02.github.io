@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicios JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Ejercicios de JavaScript Aura</h1>
+
+  <!-- 1. Inversión -->
+  <section>
+    <h2>1. Inversión con 2% mensual</h2>
+    <label>Capital: <input type="number" id="inpCapital"></label>
+    <button onclick="calcInversion()">Calcular</button>
+    <p id="outCapital" class="caja-resultado"></p>
+  </section>
+
+  <!-- 2. Sueldo + comisiones -->
+  <section>
+    <h2>2. Sueldo + comisiones</h2>
+    <label>Sueldo base: <input type="number" id="inpSueldoBase"></label>
+    <label>Venta 1: <input type="number" id="inpVentaUno"></label>
+    <label>Venta 2: <input type="number" id="inpVentaDos"></label>
+    <label>Venta 3: <input type="number" id="inpVentaTres"></label>
+    <button onclick="calcSueldo()">Calcular</button>
+    <p id="outSueldo" class="caja-resultado"></p>
+  </section>
+
+  <!-- 3. Descuento -->
+  <section>
+    <h2>3. Descuento del 15%</h2>
+    <label>Total de compra: <input type="number" id="inpCompra"></label>
+    <button onclick="calcDescuento()">Calcular</button>
+    <p id="outCompra" class="caja-resultado"></p>
+  </section>
+
+  <!-- 4. Calificación -->
+  <section>
+    <h2>4. Calificación final</h2>
+    <label>Parcial 1: <input type="number" id="inpParcialUno"></label>
+    <label>Parcial 2: <input type="number" id="inpParcialDos"></label>
+    <label>Parcial 3: <input type="number" id="inpParcialTres"></label>
+    <label>Examen final: <input type="number" id="inpExamen"></label>
+    <label>Trabajo final: <input type="number" id="inpTrabajo"></label>
+    <button onclick="calcNota()">Calcular</button>
+    <p id="outNota" class="caja-resultado"></p>
+  </section>
+
+  <!-- 5. Edad -->
+  <section>
+    <h2>5. Calcular edad</h2>
+    <label>Año de nacimiento: <input type="number" id="inpNac"></label>
+    <label>Año actual: <input type="number" id="inpActual" value="2025"></label>
+    <button onclick="calcEdad()">Calcular</button>
+    <p id="outEdad" class="caja-resultado"></p>
+  </section>
+
+  <!-- 6. Palabras a números -->
+  <section>
+    <h2>6. Palabras a números</h2>
+    <label>Escribe palabras separadas por coma (ej: cero,uno,tres):</label>
+    <input type="text" id="inpPalabras">
+    <button onclick="convPalabras()">Convertir</button>
+    <p id="outPalabras" class="caja-resultado"></p>
+  </section>
+
+  <!-- 7. Horas extras -->
+  <section>
+    <h2>7. Horas extras</h2>
+    <label>Horas trabajadas: <input type="number" id="inpHoras"></label>
+    <label>Pago por hora: <input type="number" id="inpPagoHora"></label>
+    <button onclick="calcHoras()">Calcular</button>
+    <p id="outHoras" class="caja-resultado"></p>
+  </section>
+
+  <!-- 8. Utilidad -->
+  <section>
+    <h2>8. Utilidad anual</h2>
+    <label>Salario mensual: <input type="number" id="inpSalario"></label>
+    <label>Años en la empresa: <input type="number" id="inpAntig"></label>
+    <button onclick="calcUtilidad()">Calcular</button>
+    <p id="outUtilidad" class="caja-resultado"></p>
+  </section>
+
+  <!-- 9. Formulario validación -->
+  <section>
+    <h2>9. Formulario con validación (al perder foco y al enviar)</h2>
+    <form id="formRegistro" novalidate>
+      <label for="txtNombre">Nombre (obligatorio)</label>
+      <input id="txtNombre" type="text" />
+      <div id="errNombre" class="mensaje-error"></div>
+
+      <label for="txtCorreo">Email (obligatorio)</label>
+      <input id="txtCorreo" type="email" />
+      <div id="errCorreo" class="mensaje-error"></div>
+
+      <label for="txtPass">Password (mín. 6 caracteres, al menos minúscula, mayúscula y dígito)</label>
+      <input id="txtPass" type="password" />
+      <div id="errPass" class="mensaje-error"></div>
+
+      <label for="txtComentarios">Comentarios (obligatorio, máximo 50 caracteres)</label>
+      <textarea id="txtComentarios" rows="3"></textarea>
+      <div id="errComentarios" class="mensaje-error"></div>
+
+      <label>
+        <input id="chkAcepto" type="checkbox" />
+        Acepto las condiciones del servicio (obligatorio)
+      </label>
+      <div id="errChk" class="mensaje-error"></div>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="outForm" class="caja-resultado"></p>
+  </section>
+
+  <!-- 10: Sanitizar HTML -->
+  <section>
+    <h2>10. Eliminar &lt;script&gt;...</script&gt; de una cadena HTML</h2>
+    <label for="entradaHtml">Pega aquí una cadena HTML (ej. con &lt;script&gt;):</label>
+    <textarea id="entradaHtml" rows="4"></textarea>
+    <button id="btnLimpiarHtml">Sanitizar</button>
+    <p>Resultado:</p>
+    <pre id="outHtml" class="caja-pre"></pre>
+  </section>
+  
+  <script src="logica-renovada.js"></script>
+</body>
+</html>
